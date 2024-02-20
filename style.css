@@ -1,0 +1,143 @@
+/* Importar la fuente Ubuntu desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* Establecer la fuente Ubuntu como predeterminada para todos los elementos */
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Establecer dimensiones básicas para html y body, permitiendo un desbordamiento controlado */
+html, body{
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow: auto;
+}
+
+/* Estilizar el fondo del body con un color de fondo y un gradiente lineal */
+body{
+    background-color: #cfd9df;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+/* Sección Jumbotron: altura mínima y color de texto */
+#jumbotron{
+    min-height:300px;
+    color: #fff;
+}
+
+/* Estilo para el fondo del Jumbotron, utilizando una imagen, cubriendo completamente el espacio, y aplicando un filtro para oscurecerla */
+div#jumbotron:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(./gallery.jpg);
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(0.5);
+    z-index: -1;
+}
+
+/* Estilizar el título de la aplicación con sombra de texto, espaciado de letras y centrado */
+#app-title{
+    color: #fff;
+    text-shadow: 0px 5px 7px #0000007e;
+    letter-spacing: .8px;
+    width: 100%;
+    max-width: 700px;
+    margin:auto;
+    margin-bottom: 15px;
+}
+
+/* Estilizar la descripción de la aplicación similar al título pero con alineación de texto centrada */
+#app-description{
+    color: #fff;
+    width: 100%;
+    max-width: 700px;
+    margin:auto;
+    text-shadow: 0px 3px 5px #0000007e;
+    letter-spacing: .7px;
+    text-align: center;
+}
+
+/* Contenedor del cuadro de búsqueda: tamaño y centrado */
+#seachbox-container{
+    width: 100%;
+    max-width: 750px;
+    margin:auto;
+}
+
+/* Estilos para el input y botón del cuadro de búsqueda, con bordes redondeados específicos */
+#seachbox-container .input-group input{
+    border-top-left-radius: 3em;
+    border-bottom-left-radius: 3em;
+}
+
+#seachbox-container .input-group button{
+    border-top-right-radius: 3em;
+    border-bottom-right-radius: 3em;
+}
+
+/* Estilos para los elementos de los medios: definir posición, sombra, y comportamiento al pasar el mouse */
+a.media-item {
+    position: relative;
+    display: block;
+    max-width: 33.33%;
+    padding: 10px;
+}
+
+a.media-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    box-shadow: 3px 6px 8px #00000052;
+}
+
+/* Estilos para mostrar detalles de los elementos de medios al pasar el mouse */
+a.media-item .media-item-details-hover{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #00000041;
+}
+
+a.media-item:hover .media-item-details-hover{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    padding:15px 10px ;
+}
+
+/* Estilos para el texto mostrado en el hover de los elementos de medios */
+a.media-item .media-item-details-hover .media-photographer{
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 1px 3px 5px #00000091;
+}
+
+/* Estilos para el contenedor de vista previa de medios y ajustes para las imágenes dentro */
+#preview-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 75vh;
+    background: #d3dbdf;
+}
+
+#preview-media img {
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+    object-position: center center;
+}
